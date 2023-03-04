@@ -17,7 +17,7 @@ export default _ => {
                         <option value="U">Urbana</option>
                         <option value="R">Rural</option>
                     </select>
-                    <input className='date-area' type="date"  />
+                    <input className='date-area' type="month"  />
 
                 </form>
             </div>
