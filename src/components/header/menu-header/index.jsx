@@ -4,8 +4,8 @@ export default _ => {
         <M.Menu>
             <div className="menu-barra">
                 <form action="">
-                    <input type="text" name ="nomeEst" id='name' placeholder='Nome do estabelicimento:' />
-                    <input type="text" name='endereco' id='endereco' placeholder='Endereço:' />
+                    <input className='nomeEst' type="text" name ="nomeEst" id='name' placeholder='Estabelicimento:' />
+                    <input className='endereco' type="text" name='endereco' id='endereco' placeholder='Endereço:' />
                     <select name="turno" id="turno">
                         <option value="turno">Turno:</option>
                         <option value="M">Matutino</option>
@@ -17,7 +17,7 @@ export default _ => {
                         <option value="U">Urbana</option>
                         <option value="R">Rural</option>
                     </select>
-                    <input type="date"  />
+                    <input className='date-area' type="date"  />
 
                 </form>
             </div>
