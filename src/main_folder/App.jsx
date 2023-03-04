@@ -1,6 +1,8 @@
-
+import Home from '../components/home'
 export default props =>{
     return(
-        <h1>Hello Word</h1>
+        <>
+          <Home/>
+        </>
     )
 }
