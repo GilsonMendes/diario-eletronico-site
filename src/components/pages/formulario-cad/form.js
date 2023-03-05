@@ -20,30 +20,55 @@ export const Form = styled.div`
         width: 300px;
         margin-right: 10px;
         margin-bottom: 10px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
     }
 
     .selectSexo{
         margin-right:10px;
         border: 0;
         outline: none;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
     }
 
     .inputDate{
         margin-right: 10px;
         border: 0;
         outline: none;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
     }
 
     .inputIdade{
         width: 50px;
         border: 0;
         outline: none;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
     }
 
     .disciplina{
         margin-right: 10px;
         border: 0;
         outline: none;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
 
     }
 
@@ -52,12 +77,22 @@ export const Form = styled.div`
         margin-right: 10px;
         border: 0;
         outline: none;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
     }
 
     .selectSituacao{
         border: 0;
         outline: none;
         margin-right: 10px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
     }
 
     button{
@@ -72,8 +107,7 @@ export const Form = styled.div`
     }
 
     .areaAluno:focus-within{
-        border: 2px solid rgb(185, 190, 191);
-        box-shadow: 10px 5px 5px black;
+        box-shadow: 5px 5px 5px black;
         height: 17px;
         margin-bottom: 10px;
         border-top-left-radius: 3px;

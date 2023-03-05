@@ -13,9 +13,7 @@ export default props => {
                     <input type="date"  className='inputDate'/>
                     <input type="number" max='100' placeholder='Idade:' className='inputIdade' />
                 </div>
-
-
-
+                
                 <div className='areaSituacao'>
                     <input type="text" placeholder='Disciplina:' className='disciplina' />
                     <input type="text" placeholder='Nota:' className='inputNota' />
