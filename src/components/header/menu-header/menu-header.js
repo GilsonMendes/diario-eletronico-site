@@ -5,7 +5,8 @@ export const Menu = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 720px;
+    margin: 0 auto;
     height: 25px;
     background-color: gray;
 
