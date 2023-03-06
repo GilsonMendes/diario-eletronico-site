@@ -17,15 +17,15 @@ export default _ => {
         <M.Menu>
             <div className="menu-barra">
                 <form action="">
-                    <input className='nomeEst' type="text" name ="nomeEst" id='name' placeholder='Estabelicimento:' />
-                    <input className='endereco' type="text" name='endereco' id='endereco' placeholder='Endereço:' />
-                    <select name="turno" id="turno">
+                    <input className='nomeEst' type="text" name ="nomeEst" id='name' placeholder='Estabelicimento:'  onChange={headerValues} />
+                    <input className='endereco' type="text" name='Endereco' id='endereco' placeholder='Endereço:'  onChange={headerValues} />
+                    <select name="Turno" id="turno"  onChange={headerValues}>
                         <option value="">Turno:</option>
                         <option value="M">Matutino</option>
                         <option value="V">Vespertino</option>
                         <option value="N">Noturno</option>
                     </select>
-                    <select name="area" id="area">
+                    <select name="Area" id="area"  onChange={headerValues}>
                         <option value="">Area:</option>
                         <option value="U">Urbana</option>
                         <option value="R">Rural</option>
