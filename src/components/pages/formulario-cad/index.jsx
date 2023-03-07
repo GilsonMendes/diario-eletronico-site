@@ -62,7 +62,7 @@ export default
                             <option value="aprovado">Aprovado</option>
                             <option value="reprovado">Reprovado</option>
                         </select>
-                        <button type="submit">Salvar</button>
+                        <button type="submit" onClick={salvarDados}>Salvar</button>
                         <button>Excluir</button>
                         <button className='btnLimpar'>Limpar</button>
                     </div>
