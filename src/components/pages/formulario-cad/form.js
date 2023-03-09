@@ -8,7 +8,7 @@ export const Form = styled.div`
     margin: 0 auto;
     background-image: linear-gradient(rgb(166, 108, 245), rgb(97, 47, 165),rgb(71, 19, 141) );
 
-    form{
+    .form{
        display: grid;
        justify-items:start;
        margin: 10px;
