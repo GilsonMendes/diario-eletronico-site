@@ -14,15 +14,15 @@ export default props => {
 
         }))
     }
-    const json = JSON.stringify(valueHeader)
+    const jsonH = JSON.stringify(valueHeader)
     async function salvarDadosH() {
-        const res = await axios.post('http://localhost:3000/cadastroEstab', json, {
+        const res = await axios.post('http://localhost:3000/cadastroEstab/', jsonH, {
 
             headers: {
                 'Content-Type': 'application/json'
             },
 
-            body: json
+            body: jsonH
 
         })
             .then(function (response) {
@@ -35,23 +35,20 @@ export default props => {
         <div>
             <M.Menu>
                 <div className="menu-barra">
-                    <form action="">
-                        <input className='nomeEst' type="text" name="nomeEst" id='name' placeholder='Estabelicimento:' onChange={headerValues} />
-                        <input className='endereco' type="text" name='Endereco' id='endereco' placeholder='Endereço:' onChange={headerValues} />
-                        <select name="Turno" id="turno" onChange={headerValues}>
+                        <input className='nomeEst' type="text" name="nomeEstabelecimento" id='name' placeholder='Estabelicimento:' onChange={headerValues} />
+                        <input className='endereco' type="text" name='endereco' id='endereco' placeholder='Endereço:' onChange={headerValues} />
+                        <select name="turno" id="turno" onChange={headerValues}>
                             <option value="">Turno:</option>
                             <option value="M">Matutino</option>
                             <option value="V">Vespertino</option>
                             <option value="N">Noturno</option>
                         </select>
-                        <select name="Area" id="area" onChange={headerValues}>
+                        <select name="area" id="area" onChange={headerValues}>
                             <option value="">Area:</option>
                             <option value="U">Urbana</option>
                             <option value="R">Rural</option>
                         </select>
-                        <input name='ano' className='date-area' type="nubbem" placeholder='Ano:' onChange={headerValues} />
-
-                    </form>
+                        <input name='ano' className='date-area' type="number" placeholder='Ano:' onChange={headerValues} />
                 </div>
             </M.Menu>
             <Formu salvar={salvarDadosH} />
