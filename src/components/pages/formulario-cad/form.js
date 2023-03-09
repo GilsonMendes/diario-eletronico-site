@@ -8,6 +8,15 @@ export const Form = styled.div`
     margin: 0 auto;
     background-image: linear-gradient(rgb(166, 108, 245), rgb(97, 47, 165),rgb(71, 19, 141) );
 
+    .header-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 720px;
+        margin: 0 auto;
+        height: 25px;
+        background-color: gray;
+    }
     .form{
        display: grid;
        justify-items:start;
