@@ -1,13 +1,14 @@
 import Header from '../header/header-top-primary'
 import Menu from '../header/menu-header'
-import Formulario from '../pages/formulario-cad'
+import Alunos from '../views'
 export default props => {
 
     return (
         <div>
-            <Header />
-            <Menu />
-            {/* <Formulario /> */}
+            <Alunos/>
+           {/*  <Header />
+            <Menu /> */}
+           
         </div>
     )
 }
