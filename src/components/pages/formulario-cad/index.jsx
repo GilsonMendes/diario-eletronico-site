@@ -30,18 +30,6 @@ export default props => {
 
     }
 
-    /*  const response = await fetch('http://localhost:3000/cadastroAlunos/', {
-           method: 'POST',
-           headers: {
-             'Content-Type': 'application/json'
-           },
-           body: JSON.stringify(data)
-         });
-         const result = await response.json();
- 
-         alert(JSON.stringify(result));
-       }); */
-
     return (
 
         <F.Form>
