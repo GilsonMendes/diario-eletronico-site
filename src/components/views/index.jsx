@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-/* import Card from './cards/cardAlunos' */
+import Card from './cards/cardAlunos'
 
 export default function alunos() {
-    const [viewTables, setViewTables] = useState();
+    const [viewTables, setViewTables] = useState({});
 
-     const json = JSON.stringify(viewTables)
+    const json = JSON.stringify(viewTables)
     /*  const [idNumber, setIdNumber] = useState()
      console.log(idNumber)
      const inputDate = (value) => {
@@ -15,26 +15,33 @@ export default function alunos() {
 
 
 
-    const pegarDados = () => {
-
+    useEffect(() => {
         axios.get('http://localhost:3000/cadastroAlunos/')
-            .then(({ data }) => {
-                setViewTables(data)
-               
+            .then(({data}) => {
+                setViewTables(data[length])
             })
+    }, [])
 
-    }
-
-    console.log(viewTables)
-
+    
+   
     return (
-        <div>
-
+        
+           <div>
+            {
+                
+                    <Card 
+                    nome= {viewTables.nome}
+                    idade = {viewTables.idade}
+                    genero = {viewTables.genero}
+                    dataNasc = {viewTables.dataDeNascimento}
+                    disciplina = {viewTables.disciplina}
+                    nota = {viewTables.nota}
+                    situacao = {viewTables.situacaoFinal}
+                    />
+                 
+            }
+           </div>
            
-
-            <button onClick={pegarDados}>Consultar</button>
-        </div>
-
-
+      
     )
 }
