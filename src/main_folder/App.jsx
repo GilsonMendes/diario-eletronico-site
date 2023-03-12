@@ -1,8 +1,12 @@
 import Home from '../components/home'
-export default props =>{
-    return(
-        <>
-          <Home/>
-        </>
-    )
+import React from 'react'
+export default props => {
+
+
+  return (
+    <>
+      <Home />
+    </>
+  )
+
 }
