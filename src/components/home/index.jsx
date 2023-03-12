@@ -6,8 +6,8 @@ export default props => {
     return (
         <div>
             <Alunos/>
-           {/*  <Header />
-            <Menu /> */}
+          {/*  <Header />
+            <Menu />  */}
            
         </div>
     )
