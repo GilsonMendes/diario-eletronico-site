@@ -4,8 +4,6 @@ import Card from './cards/cardAlunos'
 
 export default function alunos() {
     const [viewTables, setViewTables] = useState({});
-
-    const json = JSON.stringify(viewTables)
     /*  const [idNumber, setIdNumber] = useState()
      console.log(idNumber)
      const inputDate = (value) => {

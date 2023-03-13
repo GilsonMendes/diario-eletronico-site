@@ -1,17 +1,29 @@
 import React from "react";
+import *as C from './card'
 
-export default props =>{
-    return(
-        <div>
-            <h1>Alunos</h1>
-            <p>Nome do Aluno: {props.nome}</p>
-            <p>Idade: {props.idade}</p>
-            <p>Genero: {props.genero}</p>
-            <p>Data de Nascimento: {props.dataNasc}</p>
-            <p>Disciplina: {props.disciplina}</p>
-            <p>Nota Final: {props.nota}</p>
-            <p>Situação: {props.situacao}</p>
+export default props => {
+    return (
+        <C.card>
+            <div className="card">
+                <div className="title">
+                    <h1>Aluno</h1>
+                </div>
+                <div className="dadosAluno">
+                    <p className="paragrafo">Nome do Aluno: {props.nome}</p>
+                    <p className="paragrafo">Idade: {props.idade}</p>
+                    <p className="paragrafo">Genero: {props.genero}</p>
+                    <p className="paragrafo">Data de Nascimento: {props.dataNasc}</p>
+                    <p className="paragrafo">Disciplina: {props.disciplina}</p>
+                    <p className="paragrafo">Nota Final: {props.nota}</p>
+                    <p className="paragrafo">Situação: {props.situacao}</p>
+                </div>
+                <div>
+                    <input type="number"  className="numberId" placeholder="Id:" />
+                    <button className="btnConsul">Consultar</button>
+                    <button className="btnExc">Excluir</button>
+                </div>
 
-        </div>
+            </div>
+        </C.card>
     )
 }
