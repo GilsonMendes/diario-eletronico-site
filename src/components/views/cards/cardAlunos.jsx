@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import *as C from './card'
 
 export default props => {
+   
     return (
         <C.card>
             <div className="card">
@@ -17,11 +18,7 @@ export default props => {
                     <p className="paragrafo">Nota Final: {props.nota}</p>
                     <p className="paragrafo">Situação: {props.situacao}</p>
                 </div>
-                <div>
-                    <input type="number"  className="numberId" placeholder="Id:" />
-                    <button className="btnConsul">Consultar</button>
-                    <button className="btnExc">Excluir</button>
-                </div>
+             
 
             </div>
         </C.card>
