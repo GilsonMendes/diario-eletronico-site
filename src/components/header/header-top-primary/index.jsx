@@ -6,7 +6,7 @@ export default _ => {
             <div>
                 <h1>ATA DE RESULTADOS FINAIS DO ANO LETIVO</h1>
                 <div className='area--buttom'>
-                    <Link to='/home' className='btnHome'>HOME</Link>
+                    <Link to='/' className='btnHome'>HOME</Link>
                     <Link to='/card' className='btnAlunos'>ALUNOS</Link>
                 </div>
             </div>
