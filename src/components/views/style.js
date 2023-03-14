@@ -6,7 +6,7 @@ export const Container = styled.div `
     .area--controller{
         display: flex;
         margin: 0 auto;
-        width: 600px;
+        width: 720px;
         align-items: center;
         justify-content: left;  
     }

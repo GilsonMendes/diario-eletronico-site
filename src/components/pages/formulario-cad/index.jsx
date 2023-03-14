@@ -30,6 +30,11 @@ export default props => {
         toast.success("DADOS SALVOS COM SUCESSO!")
     }
 
+    function limpar(){
+        window.location.reload(true)
+        return;
+    }
+
 
     return (
 
@@ -39,15 +44,15 @@ export default props => {
                     <input type="text" name='nome' placeholder='Nome:' className='inputNome' onChange={inputDate} />
                     <select name="genero" id="sexo" className='selectSexo' onChange={inputDate}>
                         <option value="">Sexo:</option>
-                        <option value="maculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="nb">Não binário</option>
-                        <option value="ag">Agênero</option>
-                        <option value="gf">Gênero fluído</option>
-                        <option value="tv">Travesti</option>
-                        <option value="ts">Transexual</option>
-                        <option value="in">Intersexo</option>
-                        <option value="ot">Outro</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Não binário">Não binário</option>
+                        <option value="Agênero">Agênero</option>
+                        <option value="Gênero fluído">Gênero fluído</option>
+                        <option value="Travesti">Travesti</option>
+                        <option value="Transexual">Transexual</option>
+                        <option value="Intersexo">Intersexo</option>
+                        <option value="Outro">Outro</option>
                     </select>
                     <input type="date" name='dataDeNascimento' className='inputDate' onChange={inputDate} />
                     <input type="number" name='idade' max='100' placeholder='Idade:' className='inputIdade' onChange={inputDate} />
@@ -58,8 +63,8 @@ export default props => {
                     <input type="text" name='nota' placeholder='Nota:' className='inputNota' onChange={inputDate} />
                     <select name="situacaoFinal" id="situacaoFinal" className='selectSituacao' onChange={inputDate}>
                         <option value="">Situação Final:</option>
-                        <option value="aprovado">Aprovado</option>
-                        <option value="reprovado">Reprovado</option>
+                        <option value="Aprovado">Aprovado</option>
+                        <option value="Reprovado">Reprovado</option>
                     </select>
                     <button type="submit" onClick={
                         function (e) {
@@ -67,8 +72,7 @@ export default props => {
                             props.salvar()
                         }
                     }>Salvar</button>
-                    <button>Excluir</button>
-                    <button className='btnLimpar'>Limpar</button>
+                    <button className='btnLimpar' onClick={limpar}>Limpar</button>
                 </div>
             </div>
         </F.Form >
