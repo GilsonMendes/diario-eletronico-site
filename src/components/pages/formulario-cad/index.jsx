@@ -1,6 +1,7 @@
 import *as F from './form'
 import React, { useState } from 'react'
 import axios from 'axios'
+import { toast } from 'react-toastify';
 export default props => {
 
     const [values, setValues] = useState()
@@ -22,13 +23,13 @@ export default props => {
 
             body: json
 
+            
+
         })
-            .then(function (response) {
-                console.log(response);
 
-            })
-
+        toast.success("DADOS SALVOS COM SUCESSO!")
     }
+
 
     return (
 

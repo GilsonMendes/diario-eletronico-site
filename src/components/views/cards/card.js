@@ -1,10 +1,20 @@
 import styled from "styled-components";
 
 export const card = styled.div `
+
     display: flex;
-    width: 600px;
+    align-items: center;
+    justify-content: center;
+    width: 720px;
     margin: 0 auto;
-    margin-top: 20px;
+    background-image: linear-gradient(rgb(166, 108, 245), rgb(97, 47, 165),rgb(71, 19, 141) );
+    border: 3px solid rgb(133, 137, 135) ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* display: flex;
+    width: 720px;
+    margin: 0 auto;
+    
     align-items: center;
     justify-content: center;
     border: 3px solid rgb(133, 137, 135) ;
@@ -12,19 +22,20 @@ export const card = styled.div `
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
 
 
     .title{
         display: flex;
-        font-size: 30px;
+        font-size: 20px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: white;
         font-weight: 700;
-        width: 600px;
+        width: 720px;
         align-items: center;
         justify-content: center;
         border: 0;
+        height: 17px;
         background-color: rgb(133, 137, 135);
     }
 
@@ -56,7 +67,9 @@ export const card = styled.div `
         margin-left: 10px;
         margin-bottom: 10px;
     }
-    .btnExc{}
+    .paragrafo{
+        color: white;
+    }
 
 
 `
