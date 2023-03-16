@@ -19,7 +19,7 @@ export default function alunos() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3000/cadastroAlunos/')
+        axios.get('https://0829-2804-14d-5c32-81a0-88f9-60b-71a1-dbb1.sa.ngrok.io/cadastroAlunos/')
             .then(({ data }) => {
                 setViewTables(data[idNumber === undefined ? id :
                     idNumber
@@ -38,7 +38,7 @@ export default function alunos() {
     return (
 
         <C.Container>
-            <Header/>
+            <Header />
             {
 
                 <Card

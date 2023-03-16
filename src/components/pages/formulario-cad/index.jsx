@@ -13,9 +13,12 @@ export default props => {
             [value.target.name]: value.target.value,
         }));
     }
+    // https://0829-2804-14d-5c32-81a0-88f9-60b-71a1-dbb1.sa.ngrok.io/
+
+    //'http://localhost:3000/cadastroAlunos/'
     const json = JSON.stringify(values)
     const salvarDados = async () => {
-        await axios.post('http://localhost:3000/cadastroAlunos/', json, {
+        await axios.post('https://0829-2804-14d-5c32-81a0-88f9-60b-71a1-dbb1.sa.ngrok.io/cadastroAlunos/', json, {
 
             headers: {
                 'Content-Type': 'application/json'
