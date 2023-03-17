@@ -19,19 +19,24 @@ export default function alunos() {
 
 
     useEffect(() => {
-        axios.get('https://0829-2804-14d-5c32-81a0-88f9-60b-71a1-dbb1.sa.ngrok.io/cadastroAlunos/')
+        axios.get('http://168.194.65.117:3000/cadastroAlunos/')
             .then(({ data }) => {
                 setViewTables(data[idNumber === undefined ? id :
                     idNumber
                 ])
+
+                
+                
             })
     }, [idNumber])
 
 
     const excluirAluno = () => {
-        axios.delete(`http://localhost:3000/cadastroAlunos/${viewTables.id}`)
+        axios.delete(`http://168.194.65.117:3000/cadastroAlunos/${viewTables.id}`)
         return toast.success("ALUNO DELETADO COM SUCESSO!")
     }
+
+    console.log(viewTables.id)
 
 
 
