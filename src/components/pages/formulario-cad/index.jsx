@@ -3,13 +3,24 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+const schema = yup.object({
+    firstName: yup.string().required(),
+    age: yup.number().positive().integer().required(),
+  }).required();
+
+
 export default props => {
 
     const {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm({
+    resolver: yupResolver(schema)
+  });
 
     const [values, setValues] = useState()
     console.log(values)
@@ -59,12 +70,9 @@ export default props => {
                             placeholder='Nome:'
                             className='inputNome'
                             onChange={inputDate}
-                        >
-                            {
-                                errors.nome && alert('Preencha o campo nome!')
-                            }
-                        </input>
-                        <select name="genero" id="sexo" className='selectSexo' onChange={inputDate}>
+                        />
+                    
+                        <select   {...register('genero', { required: true })} name="genero" id="sexo" className='selectSexo' onChange={inputDate}>
                             <option value="">Sexo:</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Feminino">Feminino</option>
@@ -76,14 +84,34 @@ export default props => {
                             <option value="Intersexo">Intersexo</option>
                             <option value="Outro">Outro</option>
                         </select>
-                        <input type="date" name='dataDeNascimento' className='inputDate' onChange={inputDate} />
-                        <input type="number" name='idade' max='100' placeholder='Idade:' className='inputIdade' onChange={inputDate} />
+                        <input  {...register('dataDeNascimento', { required: true })} 
+                        type="date" name='dataDeNascimento' 
+                        className='inputDate' 
+                        onChange={inputDate}/>
+                        <input   {...register('idade', { required: true })} 
+                        type="number" name='idade' 
+                        max='100' placeholder='Idade:' 
+                        className='inputIdade' 
+                        onChange={inputDate}/>
+                       
                     </div>
 
                     <div className='areaSituacao'>
-                        <input type="text" name='disciplina' placeholder='Disciplina:' className='disciplina' onChange={inputDate} />
-                        <input type="text" name='nota' placeholder='Nota:' className='inputNota' onChange={inputDate} />
-                        <select name="situacaoFinal" id="situacaoFinal" className='selectSituacao' onChange={inputDate}>
+                        <input  {...register('disciplina', { required: true })} 
+                        type="text" name='disciplina' 
+                        placeholder='Disciplina:' 
+                        className='disciplina' 
+                        onChange={inputDate}/>
+                        
+               
+                        <input  {...register('nota', { required: true })} 
+                        type="text" name='nota' 
+                        placeholder='Nota:' 
+                        className='inputNota' 
+                        onChange={inputDate}/>
+                        
+                    
+                        <select  {...register('situacaoFinal', { required: true })} name="situacaoFinal" id="situacaoFinal" className='selectSituacao' onChange={inputDate}>
                             <option value="">Situação Final:</option>
                             <option value="Aprovado">Aprovado</option>
                             <option value="Reprovado">Reprovado</option>
@@ -91,7 +119,7 @@ export default props => {
                         <button type="submit" onClick={
                             function (e) {
                                 salvarDados()
-                                props.salvar()
+                                /* props.salvar() */
                             }
                         }>Salvar</button>
                         <button className='btnLimpar' onClick={limpar}>Limpar</button>
