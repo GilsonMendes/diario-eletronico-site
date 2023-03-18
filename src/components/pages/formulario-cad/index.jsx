@@ -84,6 +84,7 @@ export default props => {
         toast.success("DADOS SALVOS COM SUCESSO!")
     }
     const json2 = JSON.stringify(values2)
+
     const salvarDados2 = async () => {
         await axios.post('http://168.194.65.117:3000/cadastroAlunos/', json2, {
 
@@ -216,7 +217,8 @@ export default props => {
                         </select>
                         <button className='btnSalvar' type="submit" onClick={
                             function (e) {
-                                /*  salvarDados() */
+                                salvarDados1()
+                                salvarDados2()
                             }
                         }>Salvar</button>
                         <button className='btnLimpar' onClick={limpar}>Limpar</button>
