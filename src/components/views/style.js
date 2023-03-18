@@ -34,4 +34,12 @@ export const Container = styled.div `
         border: 3px solid rgb(133, 137, 135) ;
         outline: none;
     }
+
+    button:hover{
+        background-color: gray;
+        color: white;
+
+    }
+
+    
 `

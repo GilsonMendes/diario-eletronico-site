@@ -48,31 +48,54 @@ export default props => {
 
 
 
-    const [values, setValues] = useState()
-    console.log(values)
-    const inputDate = (value) => {
+    const [values1, setValues1] = useState()
 
-        setValues(prevVelue => ({
+    console.log(values1)
+    const inputDate1 = (value) => {
+
+        setValues1(prevVelue => ({
+            ...prevVelue,
+            [value.target.name]: value.target.value,
+        }));
+    }
+    const [values2, setValues2] = useState()
+
+    console.log(values2)
+    const inputDate2 = (value) => {
+
+        setValues2(prevVelue => ({
             ...prevVelue,
             [value.target.name]: value.target.value,
         }));
     }
 
-    const json = JSON.stringify(values)
-    const salvarDados = async () => {
-        await axios.post('/', json, {
+    const json1 = JSON.stringify(values1)
+    const salvarDados1 = async () => {
+        await axios.post('/', json1, {
 
             headers: {
                 'Content-Type': 'application/json'
             },
 
-            body: json
-
-
+            body: json1
 
         })
 
         toast.success("DADOS SALVOS COM SUCESSO!")
+    }
+    const json2 = JSON.stringify(values2)
+    const salvarDados2 = async () => {
+        await axios.post('http://168.194.65.117:3000/cadastroAlunos/', json2, {
+
+            headers: {
+                'Content-Type': 'application/json'
+            },
+
+            body: json2
+
+        })
+
+        
     }
 
     function limpar() {
@@ -98,22 +121,22 @@ export default props => {
                             name="nomeEstabelecimento"
                             id='name'
                             placeholder='Estabelicimento:'
-                            onChange={inputDate} />
+                            onChange={inputDate1} />
                         <input {...register('endereco', { required: true })}
                             {...errors.endereco && errors.endereco?.message}
                             className='endereco'
                             type="text" name='endereco'
                             id='endereco'
                             placeholder='Endereço:'
-                            onChange={inputDate} />
-                        <select {...register('turno', { required: true })} name="turno" id="turno" onChange={inputDate}>
+                            onChange={inputDate1} />
+                        <select {...register('turno', { required: true })} name="turno" id="turno" onChange={inputDate1}>
                             <option value="">Turno:</option>
                             <option value="M">Matutino</option>
                             <option value="V">Vespertino</option>
                             <option value="N">Noturno</option>
                             {errors.turno && errors.turno?.message}
                         </select>
-                        <select {...register('area', { required: true })} name="area" id="area" onChange={inputDate}>
+                        <select {...register('area', { required: true })} name="area" id="area" onChange={inputDate1}>
                             <option value="">Area:</option>
                             <option value="U">Urbana</option>
                             <option value="R">Rural</option>
@@ -125,7 +148,7 @@ export default props => {
                             className='date-area'
                             type="number"
                             placeholder='Ano:'
-                            onChange={inputDate} />
+                            onChange={inputDate1} />
 
                     </div>
                     {/**Fim form header */}
@@ -135,11 +158,11 @@ export default props => {
                             type="text" name='nome'
                             placeholder='Nome:'
                             className='inputNome'
-                            onChange={inputDate}
+                            onChange={inputDate2}
                             {...errors.nome && errors.nome?.message}
                         />
 
-                        <select   {...register('genero', { required: true })} name="genero" id="sexo" className='selectSexo' onChange={inputDate}>
+                        <select   {...register('genero', { required: true })} name="genero" id="sexo" className='selectSexo' onChange={inputDate2}>
                             <option value="">Sexo:</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Feminino">Feminino</option>
@@ -156,12 +179,12 @@ export default props => {
                             {...errors.dataDeNascimento && errors.dataDeNascimento?.message}
                             type="date" name='dataDeNascimento'
                             className='inputDate'
-                            onChange={inputDate} />
+                            onChange={inputDate2} />
                         <input   {...register('idade', { required: true })}
                             type="number" name='idade'
                             max='100' placeholder='Idade:'
                             className='inputIdade'
-                            onChange={inputDate} />
+                            onChange={inputDate2} />
 
 
                     </div>
@@ -174,7 +197,7 @@ export default props => {
                             type="text" name='disciplina'
                             placeholder='Disciplina:'
                             className='disciplina'
-                            onChange={inputDate} />
+                            onChange={inputDate2} />
 
 
                         <input  {...register('nota', { required: true })}
@@ -182,16 +205,16 @@ export default props => {
                             type="text" name='nota'
                             placeholder='Nota:'
                             className='inputNota'
-                            onChange={inputDate} />
+                            onChange={inputDate2} />
 
 
-                        <select  {...register('situacaoFinal', { required: true })} name="situacaoFinal" id="situacaoFinal" className='selectSituacao' onChange={inputDate}>
+                        <select  {...register('situacaoFinal', { required: true })} name="situacaoFinal" id="situacaoFinal" className='selectSituacao' onChange={inputDate2}>
                             <option value="">Situação Final:</option>
                             <option value="Aprovado">Aprovado</option>
                             <option value="Reprovado">Reprovado</option>
                             {errors.situacaoFinal && errors.situacaoFinal?.message}
                         </select>
-                        <button type="submit" onClick={
+                        <button className='btnSalvar' type="submit" onClick={
                             function (e) {
                                 /*  salvarDados() */
                             }

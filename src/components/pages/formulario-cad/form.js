@@ -179,6 +179,12 @@ export const Form = styled.div`
         border: 0;
 
     }
+
+    button:hover{
+      background-color: gray;
+      color: white;
+    }
+
     .btnLimpar{
         margin-right:0;
     }
