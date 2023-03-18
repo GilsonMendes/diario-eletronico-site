@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const card = styled.div `
 
     display: flex;
@@ -28,22 +29,22 @@ export const card = styled.div `
     .title{
         display: flex;
         font-size: 20px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: white;
         font-weight: 700;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         width: 720px;
         align-items: center;
         justify-content: center;
         border: 0;
-        height: 17px;
+        height: 25px;
         background-color: rgb(133, 137, 135);
     }
 
     .dadosAluno{
         padding: 5px;
         font-size: 20px;
-        font-weight: 500;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 400;
+        font-family: 'Roboto';
         margin-top: 15px;
         margin-left: 20px;
         color: '#403F3F';
@@ -70,6 +71,12 @@ export const card = styled.div `
     .paragrafo{
         color: white;
     }
+
+    h1{
+        font-family: 'Roboto';
+        margin-bottom: 3px;
+    }
+
 
 
 `

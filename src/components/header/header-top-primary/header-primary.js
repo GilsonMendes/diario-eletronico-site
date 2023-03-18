@@ -6,6 +6,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     color: white;
+    font-family: 'Roboto';
+    font-weight: 700;
     font-size: 20px;
     width: 100%;
     height: 100px;
@@ -24,6 +26,8 @@ export const Container = styled.div`
         border: 1px solid white;
         padding: 10px;
         font-size: 15px;
+        font-family: 'Roboto';
+        font-weight: 500;
         border-radius: 10px;
         text-decoration: none;
     }
@@ -39,6 +43,8 @@ export const Container = styled.div`
         border: 1px solid white;
         padding: 10px;
         font-size: 15px;
+        font-family: 'Roboto';
+        font-weight: 500;
         border-radius: 10px;
         text-decoration: none;
     }
