@@ -71,7 +71,7 @@ export default props => {
 
     const json1 = JSON.stringify(values1)
     const salvarDados1 = async () => {
-        await axios.post('/', json1, {
+        await axios.post('http://168.194.65.117:3000/cadastroEstab', json1, {
 
             headers: {
                 'Content-Type': 'application/json'
