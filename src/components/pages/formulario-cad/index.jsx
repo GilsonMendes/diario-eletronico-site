@@ -6,10 +6,25 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
+
+
 const schema = yup.object({
-    firstName: yup.string().required(),
-    age: yup.number().positive().integer().required(),
+    nome: yup.string().required(msnNome) ,
+    genero: yup.string().required(msnGenero),
+    dataDeNascimento: yup.string().required(msnData),
+    disciplina: yup.string().required(msnDisc),
+    nota: yup.string().required(msnNota),
+    situacaoFinal: yup.string().required(msnSFinal),
+
   }).required();
+    
+function msnNome(){toast.error("Digite um nome para o aluno!")}
+function msnGenero(){toast.error("Selecione o genero do aluno!")}
+function msnData(){toast.error("Digite uma data de nascimento!")}
+function msnDisc(){toast.error("Digite a disciplina!")}
+function msnNota(){toast.error("Digite uma nota!")}
+function msnSFinal(){toast.error("Selecione a situação final!")}
+   
 
 
 export default props => {
@@ -21,6 +36,8 @@ export default props => {
     } = useForm({
     resolver: yupResolver(schema)
   });
+
+
 
     const [values, setValues] = useState()
     console.log(values)
@@ -70,7 +87,8 @@ export default props => {
                             placeholder='Nome:'
                             className='inputNome'
                             onChange={inputDate}
-                        />
+                            {...errors.nome && errors.nome?.message} 
+                        /> 
                     
                         <select   {...register('genero', { required: true })} name="genero" id="sexo" className='selectSexo' onChange={inputDate}>
                             <option value="">Sexo:</option>
@@ -83,8 +101,10 @@ export default props => {
                             <option value="Transexual">Transexual</option>
                             <option value="Intersexo">Intersexo</option>
                             <option value="Outro">Outro</option>
+                            {errors.genero && errors.genero?.message}
                         </select>
                         <input  {...register('dataDeNascimento', { required: true })} 
+                         {...errors.dataDeNascimento && errors.dataDeNascimento?.message}
                         type="date" name='dataDeNascimento' 
                         className='inputDate' 
                         onChange={inputDate}/>
@@ -93,11 +113,13 @@ export default props => {
                         max='100' placeholder='Idade:' 
                         className='inputIdade' 
                         onChange={inputDate}/>
+                        
                        
                     </div>
 
                     <div className='areaSituacao'>
                         <input  {...register('disciplina', { required: true })} 
+                        {...errors.disciplina && errors.disciplina?.message}
                         type="text" name='disciplina' 
                         placeholder='Disciplina:' 
                         className='disciplina' 
@@ -105,6 +127,7 @@ export default props => {
                         
                
                         <input  {...register('nota', { required: true })} 
+                        {...errors.nota && errors.nota?.message}
                         type="text" name='nota' 
                         placeholder='Nota:' 
                         className='inputNota' 
@@ -115,6 +138,7 @@ export default props => {
                             <option value="">Situação Final:</option>
                             <option value="Aprovado">Aprovado</option>
                             <option value="Reprovado">Reprovado</option>
+                            {errors.situacaoFinal && errors.situacaoFinal?.message}
                         </select>
                         <button type="submit" onClick={
                             function (e) {
