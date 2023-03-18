@@ -9,22 +9,22 @@ import * as yup from "yup";
 
 
 const schema = yup.object({
-    nome: yup.string().required(msnNome) ,
+    nome: yup.string().required(msnNome),
     genero: yup.string().required(msnGenero),
     dataDeNascimento: yup.string().required(msnData),
     disciplina: yup.string().required(msnDisc),
     nota: yup.string().required(msnNota),
     situacaoFinal: yup.string().required(msnSFinal),
 
-  }).required();
-    
-function msnNome(){toast.error("Digite um nome para o aluno!")}
-function msnGenero(){toast.error("Selecione o genero do aluno!")}
-function msnData(){toast.error("Digite uma data de nascimento!")}
-function msnDisc(){toast.error("Digite a disciplina!")}
-function msnNota(){toast.error("Digite uma nota!")}
-function msnSFinal(){toast.error("Selecione a situação final!")}
-   
+}).required();
+
+function msnNome() { toast.error("Digite um nome para o aluno!") }
+function msnGenero() { toast.error("Selecione o genero do aluno!") }
+function msnData() { toast.error("Digite uma data de nascimento!") }
+function msnDisc() { toast.error("Digite a disciplina!") }
+function msnNota() { toast.error("Digite uma nota!") }
+function msnSFinal() { toast.error("Selecione a situação final!") }
+
 
 
 export default props => {
@@ -34,8 +34,8 @@ export default props => {
         handleSubmit,
         formState: { errors },
     } = useForm({
-    resolver: yupResolver(schema)
-  });
+        resolver: yupResolver(schema)
+    });
 
 
 
@@ -48,9 +48,7 @@ export default props => {
             [value.target.name]: value.target.value,
         }));
     }
-    // https://0829-2804-14d-5c32-81a0-88f9-60b-71a1-dbb1.sa.ngrok.io/
 
-    //'http://localhost:3000/cadastroAlunos/'
     const json = JSON.stringify(values)
     const salvarDados = async () => {
         await axios.post('/', json, {
@@ -78,8 +76,35 @@ export default props => {
     return (
 
         <F.Form>
-            <form onSubmit={handleSubmit((data) => console.log(data))}>
+            <form /* onSubmit={handleSubmit((data) => console.log(data))} */>
                 <div className='form'>
+
+                    <div className="menu-barra">
+
+                        <input {...register('nomeEstabelecimento', { required: true })}
+                            {...errors.nomeEstabelecimento && errors.nomeEstabelecimento?.message}
+
+                            className='nomeEst'
+                            type="text"
+                            name="nomeEstabelecimento"
+                            id='name'
+                            placeholder='Estabelicimento:'
+                            onChange={inputDate} />
+                        <input className='endereco' type="text" name='endereco' id='endereco' placeholder='Endereço:' onChange={inputDate} />
+                        <select name="turno" id="turno" onChange={inputDate}>
+                            <option value="">Turno:</option>
+                            <option value="M">Matutino</option>
+                            <option value="V">Vespertino</option>
+                            <option value="N">Noturno</option>
+                        </select>
+                        <select name="area" id="area" onChange={inputDate}>
+                            <option value="">Area:</option>
+                            <option value="U">Urbana</option>
+                            <option value="R">Rural</option>
+                        </select>
+                        <input name='ano' className='date-area' type="number" placeholder='Ano:' onChange={inputDate} />
+
+                    </div>
                     <div className='areaAluno'>
                         <input
                             {...register('nome', { required: true })}
@@ -87,9 +112,9 @@ export default props => {
                             placeholder='Nome:'
                             className='inputNome'
                             onChange={inputDate}
-                            {...errors.nome && errors.nome?.message} 
-                        /> 
-                    
+                            {...errors.nome && errors.nome?.message}
+                        />
+
                         <select   {...register('genero', { required: true })} name="genero" id="sexo" className='selectSexo' onChange={inputDate}>
                             <option value="">Sexo:</option>
                             <option value="Masculino">Masculino</option>
@@ -103,37 +128,39 @@ export default props => {
                             <option value="Outro">Outro</option>
                             {errors.genero && errors.genero?.message}
                         </select>
-                        <input  {...register('dataDeNascimento', { required: true })} 
-                         {...errors.dataDeNascimento && errors.dataDeNascimento?.message}
-                        type="date" name='dataDeNascimento' 
-                        className='inputDate' 
-                        onChange={inputDate}/>
-                        <input   {...register('idade', { required: true })} 
-                        type="number" name='idade' 
-                        max='100' placeholder='Idade:' 
-                        className='inputIdade' 
-                        onChange={inputDate}/>
-                        
-                       
+                        <input  {...register('dataDeNascimento', { required: true })}
+                            {...errors.dataDeNascimento && errors.dataDeNascimento?.message}
+                            type="date" name='dataDeNascimento'
+                            className='inputDate'
+                            onChange={inputDate} />
+                        <input   {...register('idade', { required: true })}
+                            type="number" name='idade'
+                            max='100' placeholder='Idade:'
+                            className='inputIdade'
+                            onChange={inputDate} />
+
+
                     </div>
 
+
+
                     <div className='areaSituacao'>
-                        <input  {...register('disciplina', { required: true })} 
-                        {...errors.disciplina && errors.disciplina?.message}
-                        type="text" name='disciplina' 
-                        placeholder='Disciplina:' 
-                        className='disciplina' 
-                        onChange={inputDate}/>
-                        
-               
-                        <input  {...register('nota', { required: true })} 
-                        {...errors.nota && errors.nota?.message}
-                        type="text" name='nota' 
-                        placeholder='Nota:' 
-                        className='inputNota' 
-                        onChange={inputDate}/>
-                        
-                    
+                        <input  {...register('disciplina', { required: true })}
+                            {...errors.disciplina && errors.disciplina?.message}
+                            type="text" name='disciplina'
+                            placeholder='Disciplina:'
+                            className='disciplina'
+                            onChange={inputDate} />
+
+
+                        <input  {...register('nota', { required: true })}
+                            {...errors.nota && errors.nota?.message}
+                            type="text" name='nota'
+                            placeholder='Nota:'
+                            className='inputNota'
+                            onChange={inputDate} />
+
+
                         <select  {...register('situacaoFinal', { required: true })} name="situacaoFinal" id="situacaoFinal" className='selectSituacao' onChange={inputDate}>
                             <option value="">Situação Final:</option>
                             <option value="Aprovado">Aprovado</option>
@@ -142,8 +169,9 @@ export default props => {
                         </select>
                         <button type="submit" onClick={
                             function (e) {
-                                salvarDados()
-                                /* props.salvar() */
+                                /*  salvarDados() */
+                                props.salvar()
+
                             }
                         }>Salvar</button>
                         <button className='btnLimpar' onClick={limpar}>Limpar</button>

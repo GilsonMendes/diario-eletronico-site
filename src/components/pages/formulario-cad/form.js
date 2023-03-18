@@ -6,8 +6,76 @@ export const Form = styled.div`
     justify-content: center;
     width: 720px;
     margin: 0 auto;
+    border: 3px solid gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-image: linear-gradient(rgb(166, 108, 245), rgb(97, 47, 165),rgb(71, 19, 141) );
+      
+    //header
 
+    .menu-barra:focus-within{
+        border: 1px solid rgb(9, 249, 245);
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    
+
+    .menu-barra {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: -10px;
+        width: 720px;
+        height: 25px;
+        background-color: gray;
+        margin-bottom: 10px;
+        
+    }
+    input{
+        border: 0;
+        outline: none;
+    }
+    select{
+        border: 0;
+        outline:none;
+        padding-left: 10px;
+    }
+
+    .nomeEst{
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        padding-left: 8px;
+        padding-right: 5px;  
+    }
+
+    .date-area{
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        padding-left: 8px;
+        padding-right: 5px; 
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 720px;
+        margin: 0 auto;
+        height: 25px;
+        background-color: gray;
+    }
+
+    //===========================================
+    .areaAluno{
+        margin: 0 auto;
+    }
+
+    .areaSituacao{
+        margin: 0 auto;
+    }
     .header-menu{
         display: flex;
         align-items: center;
@@ -136,5 +204,7 @@ export const Form = styled.div`
 
     }
 
+
+   
    
 `
