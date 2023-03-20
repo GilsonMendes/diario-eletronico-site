@@ -4,13 +4,14 @@ Formulario para acompanhamento de notas dos alunos de escolas.
 # Sobre o projeto
 Este projeto foi feito sobre o proposito de realizar a simulação de um diário para professores cadastrar seus alunos e suas médias finais.
 Este pequeno site visa também a conexão entre a parte fontende com a backend, onde a parte frontend se conecta ao backend utilizando uma API construida em Node Js
-pelo meu amigo Fabrício. A API aqui utilizada, se conecta ao SGBD MySql. Assim, nós permitindo ter acesso ao CRUD criado na API.
+pelo meu amigo Fabrício. A API aqui utilizada, se conecta ao SGBD MySql. Após a conexão ao DB, podemos utilizar o CRUD da API. 
 
 Esta página foi desenvolvido utilizando a biblioteca React Js. Para 
 usá -la você vai precisar:
 # 
 1. Node Js Instalado na sua máquina.
-2. Precisara rodar o comando -> node modules --force.
+2. MySql instalado na sua máquina.
+3. Precisara rodar o comando -> node modules --force.
 #
 Você pode instalar o Axios pelo comando -> yarn add axios. [Yarn](https://yarnpkg.com/getting-started/install)
 #
