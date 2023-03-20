@@ -2,7 +2,7 @@
 Formulario para acompanhamento de notas dos alunos de escolas. 
 
 # Sobre o projeto
-Este projeto foi feito sobre o proposito de realizar a simulação de um diário de usador por professores para cadastrar seus alunos e bem como suas médias finais.
+Este projeto foi feito sobre o proposito de realizar a simulação de um diário para professores cadastrar seus alunos e suas médias finais.
 Este pequeno site visa também a conexão entre a parte fontende com a backend, onde a parte frontend se conecta ao backend utilizando uma API construida em Node Js
 pelo meu amigo Fabrício. A API aqui utilizada, se conecta ao SGBD MySql. Assim, nós permitindo ter acesso ao CRUD criado na API.
 
