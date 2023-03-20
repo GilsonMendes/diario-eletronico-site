@@ -23,7 +23,7 @@ export default function alunos() {
 
 
     useEffect( async () => {
-      await  axios.get('http://168.194.65.117:3000/cadastroAlunos/')
+      await  axios.get('http://localhost:3000/cadastroAlunos/')
             .then(({ data }) => {
                 setViewTables(data[idNumber === undefined ? id :
                     idNumber
@@ -34,7 +34,7 @@ export default function alunos() {
 
 
     const excluirAluno = () => {
-        axios.delete(`http://168.194.65.117:3000/cadastroAlunos/${viewTables.id}`)
+        axios.delete(`http://localhost:3000/cadastroAlunos/${viewTables.id}`)
         return toast.success("ALUNO DELETADO COM SUCESSO!")
     }
 
