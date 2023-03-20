@@ -17,10 +17,10 @@ Você pode instalar o Axios pelo comando -> yarn add axios. [Yarn](https://yarnp
 #
 Para instalação do node basta acessar o site -> [Node Js](https://nodejs.org/en/download/).
 ## Layout do App
-![Tela 1](https://github.com/GilsonMendes/App_Mb_Ard/blob/main/App_Ard/Imagens_Projeto/Tela%201.png)![Tela 2](https://github.com/GilsonMendes/App_Mb_Ard/blob/main/App_Ard/Imagens_Projeto/Tela%202.png)
-![Tela 3](https://github.com/GilsonMendes/App_Mb_Ard/blob/main/App_Ard/Imagens_Projeto/Tela%203.png)
-## Esp8266
-![Esp8266 ](https://github.com/GilsonMendes/App_Mb_Ard/blob/main/App_Ard/Imagens_Projeto/Esp8266_01.jpeg)
+![Tela 1](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela1.png)![Tela 2](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela%202.png)
+![Tela 3](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela3.png)
+![Tela 4]https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela4.png)
+![Tela 5](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela3.png)
 
 # Tecnologias utilizadas
 - Javascript.
