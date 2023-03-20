@@ -13,8 +13,12 @@ export default function alunos() {
 
         setIdNumber(value.target.value);
     }
+    
+    const id = 0 ;
+    
 
-    let id = 0;
+    console.log("Id do DB ",viewTables.id)
+
 
 
 
@@ -23,11 +27,9 @@ export default function alunos() {
             .then(({ data }) => {
                 setViewTables(data[idNumber === undefined ? id :
                     idNumber
-                ])
-
-                
-                
+                ])     
             })
+            
     }, [idNumber])
 
 
@@ -36,8 +38,9 @@ export default function alunos() {
         return toast.success("ALUNO DELETADO COM SUCESSO!")
     }
 
-    console.log(viewTables.id)
-
+   
+    
+    
 
 
     return (
@@ -58,7 +61,7 @@ export default function alunos() {
 
             }
             <div className='area--controller'>
-                <input type="number" placeholder='Id:' onChange={inputDate} />
+                <input min={0} type="number" placeholder='Id:' onChange={inputDate} />
                 <button className='btn--controller' onClick={excluirAluno} >Excluir</button>
             </div>
         </C.Container>
