@@ -20,7 +20,7 @@ Para instalação do node basta acessar o site -> [Node Js](https://nodejs.org/e
 ![Tela 1](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela1.png)![Tela 2](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela%202.png)
 ![Tela 3](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela3.png)
 ![Tela 4](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela4.png)
-![Tela 5](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela3.png)
+![Tela 5]([https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela3.png](https://github.com/GilsonMendes/diario-eletronico-site/blob/main/imagens/Tela%205.png))
 
 # Tecnologias utilizadas
 - Javascript.
