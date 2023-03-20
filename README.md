@@ -32,9 +32,11 @@ Dentro do projeto você terá que rodar o comando -> node modulos, para instalar
 # executar o projeto
 No promp ou terminal rode o comando:
 <br/>
- Para o front - end - > npm run dev
+ Para o front - end: ' npm run dev '
 <br/>
-Para o back - end -> node server.js
+Para o back - end: ' node server.js '
+<br/> 
+Obs. Rode os comandos acima em terminas ou promp diferentes e sem as aspas. 
 ```
 
 
