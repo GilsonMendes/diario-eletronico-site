@@ -22,8 +22,8 @@ export default function alunos() {
 
 
 
-    useEffect(() => {
-        axios.get('http://168.194.65.117:3000/cadastroAlunos/')
+    useEffect( async () => {
+      await  axios.get('http://168.194.65.117:3000/cadastroAlunos/')
             .then(({ data }) => {
                 setViewTables(data[idNumber === undefined ? id :
                     idNumber
